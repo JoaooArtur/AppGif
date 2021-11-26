@@ -32,8 +32,7 @@ class MyHomePage extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         children: <Widget>[
           Container(
-            height: 200,
-            width: 100,
+            height: 400,
             child: Center(
                 child: Column(
               children: [
