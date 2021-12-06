@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'api/giphy.dart';
+
 class InitialPage extends StatefulWidget {
   @override
   _InitialPageState createState() => _InitialPageState();
@@ -13,9 +15,11 @@ class _InitialPageState extends State<InitialPage> {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       body: SizedBox(
-          width: double.infinity,
-          height: double.infinity,
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             ClipRRect(
                 child: Container(
                   child: Image.network('https://c.tenor.com/oogtfsQRHkgAAAAM/lost-john-travolta.gif'),
@@ -37,25 +41,35 @@ class _InitialPageState extends State<InitialPage> {
               Container(
                 decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent, width: 3), borderRadius: BorderRadius.circular(10)),
                 child: ElevatedButton(
-                    onPressed: () {
-                      debugPrint(temaGif);
-                    },
-                    child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  onPressed: () {
+                    print(GiphyAPI.BuscarGifs(temaGif, 0));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
                       Icon(Icons.search),
                       Padding(padding: EdgeInsets.all(8), child: Text('Pesquisar', style: TextStyle(fontSize: 15)))
-                    ])),
+                    ],
+                  ),
+                ),
               ),
               Container(
                 decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent, width: 3), borderRadius: BorderRadius.circular(10)),
                 child: ElevatedButton(
-                    onPressed: () {},
-                    child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
                       Icon(Icons.star),
                       Padding(padding: EdgeInsets.all(8), child: Text('Favoritos', style: TextStyle(fontSize: 15)))
-                    ])),
+                    ],
+                  ),
+                ),
               ),
             ]),
-          ])),
+          ],
+        ),
+      ),
     );
   }
 }
