@@ -22,7 +22,7 @@ class _InitialPageState extends State<InitialPage> {
                 ),
                 borderRadius: BorderRadius.circular(150)),
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(8.0),
               child: TextField(
                   onChanged: (text) {
                     temaGif = text;
