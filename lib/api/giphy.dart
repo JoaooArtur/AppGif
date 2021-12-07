@@ -7,7 +7,7 @@ class GiphyAPI {
       'api_key': '1CYYivEibVP4tvKDcSOzssCRicN4p5Cz',
       'p': search,
       'limit': '10',
-      'offset': offset,
+      'offset': offset.toString(),
       'rating': 'g',
       'lang': 'pt'
     });
