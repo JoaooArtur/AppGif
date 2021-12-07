@@ -16,10 +16,17 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
-      body: SizedBox(
-        width: double.infinity,
-        height: double.infinity,
-        child: Image.network(widget.gifs[0]),
+      body: SingleChildScrollView(
+        controller: _controller,
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return Image.network(widget.gifs[index]);
+            },
+            itemCount: widget.gifs.length,
+          ),
+        ),
       ),
     );
   }
