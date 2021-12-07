@@ -19,7 +19,7 @@ class _SecondPageState extends State<SecondPage> {
         child: Expanded(
           child: ListView.builder(
             itemBuilder: (context, index) {
-              return Image.network(widget.gifs[index]);
+              return Expanded(child: Image.network(widget.gifs[index]));
             },
             itemCount: widget.gifs.length,
           ),
