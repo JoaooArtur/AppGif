@@ -16,8 +16,8 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.lightBlueAccent,
-        body: SizedBox(
-          child: Image.network(widget.gifs[0].toString()),
+        body: Center(
+          child: Image.network(widget.gifs[0], width: 300, height: 400, fit: BoxFit.contain),
         ));
   }
 }
