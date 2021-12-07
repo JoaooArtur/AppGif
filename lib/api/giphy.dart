@@ -6,7 +6,10 @@ class GiphyAPI {
     var uri = Uri.https('api.giphy.com', '/v1/gifs/search', {
       'api_key': '1CYYivEibVP4tvKDcSOzssCRicN4p5Cz',
       'p': search,
-      'limit': '10'
+      'limit': '10',
+      'offset': offset,
+      'rating': 'g',
+      'lang': 'pt'
     });
 
     print(uri);
