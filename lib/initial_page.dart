@@ -9,6 +9,7 @@ class InitialPage extends StatefulWidget {
 
 class _InitialPageState extends State<InitialPage> {
   String temaGif = "";
+  List<String> gifs = [];
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +43,7 @@ class _InitialPageState extends State<InitialPage> {
                 decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent, width: 3), borderRadius: BorderRadius.circular(10)),
                 child: ElevatedButton(
                   onPressed: () {
-                    GiphyAPI.BuscarGifs(temaGif, 0).then((x) => {
-                          print(x)
-                        });
+                    GiphyAPI.BuscarGifs(temaGif, 0).then((x) => gifs.add(x));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
