@@ -16,12 +16,13 @@ class _SecondPageState extends State<SecondPage> {
       backgroundColor: Colors.lightBlueAccent,
       body: Container(
         width: MediaQuery.of(context).size.width,
-        child: ListView.builder(
-          itemBuilder: (context, index) {
-            print(widget.gifs[index]);
-            return Image.network(widget.gifs[index]);
-          },
-          itemCount: widget.gifs.length,
+        child: Expanded(
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return Image.network(widget.gifs[index]);
+            },
+            itemCount: widget.gifs.length,
+          ),
         ),
       ),
     );
