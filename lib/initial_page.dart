@@ -44,7 +44,6 @@ class _InitialPageState extends State<InitialPage> {
                 child: ElevatedButton(
                   onPressed: () {
                     GiphyAPI.BuscarGifs(temaGif, 0).then((x) => print(x));
-                    print(gifs);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
