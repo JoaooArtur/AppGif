@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
 class GiphyAPI {
-  static dynamic BuscarGifs(String search, int offset) async {
+  static Future<List<String>> BuscarGifs(String search, int offset) async {
     var uri = Uri.https('api.giphy.com', '/v1/gifs/search', {
       'api_key': '1CYYivEibVP4tvKDcSOzssCRicN4p5Cz',
       'q': search,
@@ -14,6 +14,6 @@ class GiphyAPI {
 
     var response = await http.get(uri);
 
-    return convert.jsonDecode(response.body)["data"].map((x) => x["url"]);
+    return await convert.jsonDecode(response.body)["data"].map((x) => x["url"]).toList();
   }
 }
