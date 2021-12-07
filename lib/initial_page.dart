@@ -9,7 +9,7 @@ class InitialPage extends StatefulWidget {
 
 class _InitialPageState extends State<InitialPage> {
   String temaGif = "";
-  List<String> gifs = [];
+  List<dynamic> gifs = [];
 
   @override
   Widget build(BuildContext context) {
