@@ -43,7 +43,7 @@ class _InitialPageState extends State<InitialPage> {
                 decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent, width: 3), borderRadius: BorderRadius.circular(10)),
                 child: ElevatedButton(
                   onPressed: () {
-                    GiphyAPI.BuscarGifs(temaGif, 0).then((x) => gifs = x);
+                    GiphyAPI.BuscarGifs(temaGif, 0).then((x) => print(x));
                     print(gifs);
                   },
                   child: Row(
