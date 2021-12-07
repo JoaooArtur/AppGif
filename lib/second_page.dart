@@ -18,6 +18,7 @@ class _SecondPageState extends State<SecondPage> {
         width: MediaQuery.of(context).size.width,
         child: ListView.builder(
           itemBuilder: (context, index) {
+            print(widget.gifs)
             return Image.network(widget.gifs[index]);
           },
           itemCount: widget.gifs.length,
