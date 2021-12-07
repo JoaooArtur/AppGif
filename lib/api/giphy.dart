@@ -15,7 +15,7 @@ class GiphyAPI {
     var response = await http.get(uri);
 
     var fuck = convert.jsonDecode(response.body)["data"];
-
+    print(fuck);
     List<String> gifs = [];
     fuck.map((x) {
       print(x);
