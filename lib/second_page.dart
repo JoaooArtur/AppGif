@@ -19,8 +19,13 @@ class _SecondPageState extends State<SecondPage> {
       body: SingleChildScrollView(
         controller: _controller,
         child: ListView.builder(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
           itemBuilder: (context, index) {
-            return Image.network(widget.gifs[index]);
+            return Container(
+              child: Image.network(widget.gifs[index]),
+              width: 100,
+            );
           },
           itemCount: widget.gifs.length,
         ),
