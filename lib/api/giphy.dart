@@ -12,9 +12,10 @@ class GiphyAPI {
       'lang': 'pt'
     });
 
-    print(uri);
     var response = await http.get(uri);
-    print(response.body);
-    return convert.jsonDecode(response.body)["data"].map((x) => x["url"]).toList();
+
+    var fuck = convert.jsonDecode(response.body)["data"].map((x) => x["url"]);
+    print(fuck);
+    return fuck.toList();
   }
 }
