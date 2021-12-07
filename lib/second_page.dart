@@ -10,11 +10,14 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPageState extends State<SecondPage> {
+  ScrollController _controller = new ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       body: SingleChildScrollView(
+        controller: _controller,
         child: Container(
           width: MediaQuery.of(context).size.width,
           child: ListView.builder(
