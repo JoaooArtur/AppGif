@@ -14,11 +14,11 @@ class GiphyAPI {
 
     var response = await http.get(uri);
 
-    var fuck = convert.jsonDecode(response.body)["data"];
+    List<dynamic> fuck = convert.jsonDecode(response.body)["data"];
 
     List<String> gifs = [];
 
-    fuck.foreach((x) {
+    fuck.forEach((x) {
       print(x);
     });
 
