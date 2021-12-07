@@ -19,7 +19,7 @@ class GiphyAPI {
     List<String> gifs = [];
 
     fuck.forEach((x) {
-      print(x);
+      print(x["url"]);
     });
 
     return gifs;
