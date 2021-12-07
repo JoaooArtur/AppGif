@@ -45,6 +45,7 @@ class _InitialPageState extends State<InitialPage> {
                   onPressed: () async {
                     GiphyAPI.BuscarGifs(temaGif, 0).then((x) {
                       gifs = x;
+                      print(gifs);
                     });
                   },
                   child: Row(
