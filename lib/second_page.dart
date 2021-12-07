@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'api/giphy.dart';
-
 class SecondPage extends StatefulWidget {
+  final List<String> gifs;
+
+  SecondPage(this.gifs);
+
   @override
   _SecondPageState createState() => _SecondPageState();
 }
@@ -14,8 +16,14 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
-      body: SizedBox(
-        child: Text("Teste"),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        child: ListView.builder(
+          itemBuilder: (context, index) {
+            return Card(child: Image.network(widget.gifs[index]));
+          },
+          itemCount: widget.gifs.length,
+        ),
       ),
     );
   }

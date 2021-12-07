@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'api/giphy.dart';
+import 'second_page.dart';
 
 class InitialPage extends StatefulWidget {
   @override
@@ -44,8 +45,15 @@ class _InitialPageState extends State<InitialPage> {
                 child: ElevatedButton(
                   onPressed: () async {
                     GiphyAPI.BuscarGifs(temaGif, 0).then((x) {
-                      gifs = x;
-                      print(gifs);
+                      setState(() {
+                        gifs = x;
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SecondPage(gifs.map((x) => x.toString()).toList()),
+                          ),
+                        );
+                      });
                     });
                   },
                   child: Row(
