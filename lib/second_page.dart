@@ -10,8 +10,6 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPageState extends State<SecondPage> {
-  String temaGif = "";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +18,7 @@ class _SecondPageState extends State<SecondPage> {
         width: MediaQuery.of(context).size.width,
         child: ListView.builder(
           itemBuilder: (context, index) {
-            return Card(child: Image.network(widget.gifs[index]));
+            return Image.network(widget.gifs[index]);
           },
           itemCount: widget.gifs.length,
         ),
