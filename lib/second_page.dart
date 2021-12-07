@@ -19,7 +19,7 @@ class _SecondPageState extends State<SecondPage> {
       body: SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: Image.network(widget.gifs[0] + '.gif'),
+        child: Image.network(widget.gifs[0]),
       ),
     );
   }
