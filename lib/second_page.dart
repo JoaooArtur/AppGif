@@ -17,7 +17,6 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       body: SingleChildScrollView(
-        physics: const NeverScrollableScrollPhysics(),
         controller: _controller,
         child: ListView.builder(
           scrollDirection: Axis.vertical,
