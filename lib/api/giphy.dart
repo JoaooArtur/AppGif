@@ -16,6 +16,6 @@ class GiphyAPI {
 
     List<dynamic> json = convert.jsonDecode(response.body)["data"];
 
-    return json.map((x) => x["embed_url"]).toList();
+    return json.map((x) => x["images"]["original"]["url"]).toList();
   }
 }
