@@ -15,9 +15,20 @@ class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.lightBlueAccent,
-        body: Center(
-          child: Image.network(widget.gifs[0], width: 300, height: 400, fit: BoxFit.contain),
-        ));
+      backgroundColor: Colors.lightBlueAccent,
+      body: SingleChildScrollView(
+        controller: _controller,
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              print(widget.gifs[index]);
+              return Image.network(widget.gifs[index]);
+            },
+            itemCount: widget.gifs.length,
+          ),
+        ),
+      ),
+    );
   }
 }
