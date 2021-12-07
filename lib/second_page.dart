@@ -18,16 +18,18 @@ class _SecondPageState extends State<SecondPage> {
       backgroundColor: Colors.lightBlueAccent,
       body: SingleChildScrollView(
         controller: _controller,
-        child: ListView.builder(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
-          itemBuilder: (context, index) {
-            return Container(
-              child: Image.network(widget.gifs[index]),
-              width: 100,
-            );
-          },
-          itemCount: widget.gifs.length,
+        child: Scrollbar(
+          child: ListView.builder(
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return Container(
+                child: Image.network(widget.gifs[index]),
+                width: 100,
+              );
+            },
+            itemCount: widget.gifs.length,
+          ),
         ),
       ),
     );
