@@ -23,30 +23,26 @@ class _SecondPageState extends State<SecondPage> {
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return Container(
-                height: 400,
-                child: Center(
-                    child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: Container(
-                                child: FittedBox(
-                                  clipBehavior: Clip.antiAlias,
-                                  child: Image.network(widget.gifs[index]),
-                                ),
-                              ),
-                            ),
-                            ElevatedButton(
-                                onPressed: () {},
-                                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                                  Icon(Icons.delete),
-                                  Padding(padding: EdgeInsets.all(8), child: Text('Desfavoritar', style: TextStyle(fontSize: 15)))
-                                ])),
-                          ],
-                        ))),
+              return Card(
+                elevation: 2.0,
+                shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(16.0),
+                ),
+                child: new InkWell(
+                  child: new Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      new ClipRRect(
+                        child: Image.network(widget.gifs[index]),
+                        borderRadius: BorderRadius.only(
+                          topLeft: new Radius.circular(16.0),
+                          topRight: new Radius.circular(16.0),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               );
             },
             itemCount: widget.gifs.length,
