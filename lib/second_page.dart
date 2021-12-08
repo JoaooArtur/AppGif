@@ -25,18 +25,19 @@ class _SecondPageState extends State<SecondPage> {
             itemBuilder: (context, index) {
               return Container(
                 height: 400,
-                child: Center(
+                child: Center(Padding(
+                    padding: EdgeInsets.all(8),
                     child: Column(
-                  children: [
-                    Image.network(widget.gifs[index]),
-                    ElevatedButton(
-                        onPressed: () {},
-                        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                          Icon(Icons.delete),
-                          Padding(padding: EdgeInsets.all(8), child: Text('Desfavoritar', style: TextStyle(fontSize: 15)))
-                        ])),
-                  ],
-                )),
+                      children: [
+                        Image.network(widget.gifs[index]),
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                              Icon(Icons.delete),
+                              Padding(padding: EdgeInsets.all(8), child: Text('Desfavoritar', style: TextStyle(fontSize: 15)))
+                            ])),
+                      ],
+                    ))),
               );
             },
             itemCount: widget.gifs.length,
