@@ -33,7 +33,8 @@ class _SecondPageState extends State<SecondPage> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
                               child: FittedBox(
-                                child: Image.network(widget.gifs[index], clipBehavior: Clip.hardEdge),
+                                clipBehavior: Clip.hardEdge,
+                                child: Image.network(widget.gifs[index]),
                               ),
                             ),
                             ElevatedButton(
