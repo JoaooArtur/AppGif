@@ -15,6 +15,9 @@ class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Gifs"),
+      ),
       backgroundColor: Colors.lightBlueAccent,
       body: SingleChildScrollView(
         controller: _controller,
