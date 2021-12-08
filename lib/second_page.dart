@@ -39,12 +39,15 @@ class _SecondPageState extends State<SecondPage> {
                                 ),
                               ),
                             ),
-                            ElevatedButton(
-                                onPressed: () {},
-                                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                                  Icon(Icons.delete),
-                                  Padding(padding: EdgeInsets.all(8), child: Text('Desfavoritar', style: TextStyle(fontSize: 15)))
-                                ])),
+                            Padding(
+                              padding: EdgeInsets.all(8),
+                              child: ElevatedButton(
+                                  onPressed: () {},
+                                  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                                    Icon(Icons.delete),
+                                    Padding(padding: EdgeInsets.all(8), child: Text('Desfavoritar', style: TextStyle(fontSize: 15)))
+                                  ])),
+                            )
                           ],
                         ))),
               );
