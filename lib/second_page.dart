@@ -35,7 +35,7 @@ class _SecondPageState extends State<SecondPage> {
                               child: Image.network(
                                 widget.gifs[index],
                                 height: 300.0,
-                                width: 100.0,
+                                width: 300.0,
                               ),
                             ),
                             ElevatedButton(
