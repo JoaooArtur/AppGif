@@ -1,16 +1,19 @@
-# AppGif
+# About the Project
+Nós vamos desenvolver um app onde o usuário tera uma tela inicial onde poderá pesquisar sobre alguma palavra chave e o aplicativo irá buscar gifs com o assunto relacionado, iremos consumir a API do https://developers.giphy.com/
 
-A new Flutter project.
+# Developers
+Matheus Tambosi e João Artur
 
-## Getting Started
+# Technologies
+- Flutter
+- Dart
+- API Giphy
 
-This project is a starting point for a Flutter application.
+#APP SCREENS
+- Tela Inicial
+- ![image](https://user-images.githubusercontent.com/61556834/145293275-58794bdf-4add-417d-a326-81e2fd63359d.png)
+- Ao digitar oque pesquisar a api de gifs é consultada e o app redireciona para a próxima página mostrando o resultado da pesquisa
+- Tela Gifs
+- ![image](https://user-images.githubusercontent.com/61556834/145293447-1fa2b49b-96a7-4f5d-8a87-1025f630aaea.png)
+- Aqui é listado o resultado da pesquisa de gifs
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
