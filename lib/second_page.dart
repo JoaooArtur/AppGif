@@ -39,10 +39,7 @@ class _SecondPageState extends State<SecondPage> {
                     children: <Widget>[
                       new ClipRRect(
                         child: Image.network(widget.gifs[index]),
-                        borderRadius: BorderRadius.only(
-                          topLeft: new Radius.circular(16.0),
-                          topRight: new Radius.circular(16.0),
-                        ),
+                        borderRadius: BorderRadius.all(new Radius.circular(16.0)),
                       ),
                     ],
                   ),
