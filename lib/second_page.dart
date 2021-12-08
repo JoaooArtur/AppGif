@@ -30,7 +30,12 @@ class _SecondPageState extends State<SecondPage> {
                         padding: EdgeInsets.all(8),
                         child: Column(
                           children: [
-                            Image.network(widget.gifs[index]),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(widget.gifs[index]),
+                              height: 150.0,
+                              width: 100.0,
+                            ),
                             ElevatedButton(
                                 onPressed: () {},
                                 child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
