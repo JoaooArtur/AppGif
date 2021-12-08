@@ -30,9 +30,9 @@ class _SecondPageState extends State<SecondPage> {
                         padding: EdgeInsets.all(8),
                         child: Column(
                           children: [
-                            Container(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Container(
                                 child: FittedBox(
                                   clipBehavior: Clip.hardEdge,
                                   child: Image.network(widget.gifs[index]),
