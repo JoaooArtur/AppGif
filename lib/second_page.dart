@@ -15,6 +15,10 @@ class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Gifs"),
+        centerTitle: true,
+      ),
       backgroundColor: Colors.lightBlueAccent,
       body: SingleChildScrollView(
         controller: _controller,
@@ -23,9 +27,23 @@ class _SecondPageState extends State<SecondPage> {
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return Container(
-                child: Image.network(widget.gifs[index]),
-                width: 100,
+              return Card(
+                elevation: 2.0,
+                shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(16.0),
+                ),
+                child: new InkWell(
+                  child: new Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      new ClipRRect(
+                        child: Image.network(widget.gifs[index]),
+                        borderRadius: BorderRadius.all(new Radius.circular(16.0)),
+                      ),
+                    ],
+                  ),
+                ),
               );
             },
             itemCount: widget.gifs.length,
