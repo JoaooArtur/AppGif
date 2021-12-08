@@ -34,20 +34,17 @@ class _SecondPageState extends State<SecondPage> {
                               borderRadius: BorderRadius.circular(8.0),
                               child: Container(
                                 child: FittedBox(
-                                  clipBehavior: Clip.hardEdge,
+                                  clipBehavior: Clip.antiAlias,
                                   child: Image.network(widget.gifs[index]),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.all(8),
-                              child: ElevatedButton(
-                                  onPressed: () {},
-                                  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                                    Icon(Icons.delete),
-                                    Padding(padding: EdgeInsets.all(8), child: Text('Desfavoritar', style: TextStyle(fontSize: 15)))
-                                  ])),
-                            )
+                            ElevatedButton(
+                                onPressed: () {},
+                                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                                  Icon(Icons.delete),
+                                  Padding(padding: EdgeInsets.all(8), child: Text('Desfavoritar', style: TextStyle(fontSize: 15)))
+                                ])),
                           ],
                         ))),
               );
