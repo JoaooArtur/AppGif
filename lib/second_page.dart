@@ -30,8 +30,8 @@ class _SecondPageState extends State<SecondPage> {
                 ),
                 child: new InkWell(
                   child: new Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       new ClipRRect(
                         child: Image.network(widget.gifs[index]),
