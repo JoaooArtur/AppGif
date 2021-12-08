@@ -29,6 +29,8 @@ class _SecondPageState extends State<SecondPage> {
                     child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
