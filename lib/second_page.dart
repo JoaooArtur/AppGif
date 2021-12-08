@@ -17,6 +17,7 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Gifs"),
+        centerTitle: true,
       ),
       backgroundColor: Colors.lightBlueAccent,
       body: SingleChildScrollView(
