@@ -24,8 +24,19 @@ class _SecondPageState extends State<SecondPage> {
             shrinkWrap: true,
             itemBuilder: (context, index) {
               return Container(
-                child: Image.network(widget.gifs[index]),
-                width: 100,
+                height: 400,
+                child: Center(
+                    child: Column(
+                  children: [
+                    Image.network(widget.gifs[index]),
+                    ElevatedButton(
+                        onPressed: () {},
+                        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                          Icon(Icons.delete),
+                          Padding(padding: EdgeInsets.all(8), child: Text('Desfavoritar', style: TextStyle(fontSize: 15)))
+                        ])),
+                  ],
+                )),
               );
             },
             itemCount: widget.gifs.length,
