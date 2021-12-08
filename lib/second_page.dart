@@ -34,7 +34,7 @@ class _SecondPageState extends State<SecondPage> {
                               borderRadius: BorderRadius.circular(8.0),
                               child: Image.network(
                                 widget.gifs[index],
-                                height: 150.0,
+                                height: 500.0,
                                 width: 100.0,
                               ),
                             ),
