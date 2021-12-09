@@ -9,6 +9,10 @@ Matheus Tambosi e João Artur
 - Dart
 - API Giphy
 
+#Packages
+- Material
+- Http
+
 #APP SCREENS
 - Tela Inicial
 - ![image](https://user-images.githubusercontent.com/61556834/145293275-58794bdf-4add-417d-a326-81e2fd63359d.png)
